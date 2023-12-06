@@ -1,0 +1,5 @@
+@mixin pink-purple-gradient {
+  background: transparent linear-gradient(90deg, $purple 0%, $pink 100%) 0% 0%
+    no-repeat padding-box;
+  color: white;
+}

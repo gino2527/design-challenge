@@ -1,0 +1,105 @@
+.pricing-option {
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 24px -8px rgba(0, 0, 0, 0.5);
+  color: $pink;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 200px;
+  min-width: 200px;
+  padding: 32px 24px 72px;
+  position: relative;
+
+  &--bordered {
+    border: 3px solid $light-pink;
+  }
+  
+  &__title {
+    color: $purple;
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  &__price {
+    color: $pink;
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 4px;
+  
+    &-currentcy {
+      align-self: flex-start;
+      line-height: 1.75;
+    }
+    
+    &-amount {
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 64px;
+    }
+    
+    &-period {
+      align-self: flex-end;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.75;
+      margin-left: 8px;
+    }
+  }
+  
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 16px;
+  }
+  
+  &__feature {
+    align-items: center;
+    color: $grey;
+    display: flex;
+    gap: 8px;
+  }
+  
+  &__feature-arrow {
+    height: 12px;
+    min-width: 12px;
+    width: 12px;
+
+    * {
+      stroke: $pink;
+      stroke-width: 36px;
+    }
+  }
+  
+  &__popular {
+    border-radius: 24px;
+    box-shadow: 0px 0px 24px -8px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 8px 28px;
+    position: absolute;
+    text-transform: capitalize;
+    top: -16px;
+  }
+  
+  &__start {
+    border-radius: 24px;
+    border: none;
+    bottom: -22.5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 16px 36px;
+    position: absolute;
+    text-transform: uppercase;
+  }
+}

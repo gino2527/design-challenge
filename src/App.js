@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// own components
+import PricingOption from './components/PricingOption';
+
+// constants
+import PRICING_OPTIONS from './data';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Our Pricing Plans</h1>
+      <div className="pricing-options">
+        {PRICING_OPTIONS.map((pricingOption, pricingOptionIndex) => {
+          const { title: pricingOptionTitle } = pricingOption;
+
+          return (
+            <PricingOption
+              isBordered={pricingOptionTitle !== 'Beginner'}
+              isPopular={pricingOptionTitle === 'Starter'}
+              key={`pricingOption-${pricingOptionIndex + 1}`}
+              {...pricingOption} />
+          );
+        })}
+      </div>
     </div>
   );
 }
